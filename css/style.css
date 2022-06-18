@@ -244,136 +244,6 @@ section{
 
 /* end own about */
 
-/* text info productos */
-.info-abarrotes {
-  background:url(../images/sections-view/vector-abarrotes.jpg);
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: center;
-  background-size: cover;
-  position: relative;
-  padding-top: 1rem;
-  border-radius: 3rem;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  padding-bottom: 1rem; 
-  z-index: 1; 
-}
-
-.info-frutas {
-  background:url(../images/sections-view/vector-frutas.jpg);
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: center;
-  background-size: cover;
-  position: relative;
-  padding-top: 1rem;
-  border-radius: 3rem;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  padding-bottom: 1rem; 
-  z-index: 1; 
-}
-
-.info-verduras {
-  background:url(../images/sections-view/vector-verduras.jpg);
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: center;
-  background-size: cover;
-  position: relative;
-  padding-top: 1rem;
-  border-radius: 3rem;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  padding-bottom: 1rem; 
-  z-index: 1; 
-}
-
-.info-carniceria {
-  background:url(../images/sections-view/vector-carnes.jpg);
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: center;
-  background-size: cover;
-  position: relative;
-  padding-top: 1rem;
-  border-radius: 3rem;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  padding-bottom: 1rem; 
-  z-index: 1; 
-}
-
-.info-mascotas {
-  background:url(../images/sections-view/vector-petshop.jpg);
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: center;
-  background-size: cover;
-  position: relative;
-  padding-top: 1rem;
-  border-radius: 3rem;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  padding-bottom: 1rem; 
-  z-index: 1; 
-}
-
-.info-licores {
-  background:url(../images/sections-view/vector-licores.jpg);
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: center;
-  background-size: cover;
-  position: relative;
-  padding-top: 1rem;
-  border-radius: 3rem;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  padding-bottom: 1rem; 
-  z-index: 1; 
-}
-
-.info-flores {
-  background:url(../images/sections-view/vector-flores.jpg);
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: center;
-  background-size: cover;
-  position: relative;
-  padding-top: 1rem;
-  border-radius: 3rem;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  padding-bottom: 1rem; 
-  z-index: 1; 
-}
-
-.info-abarrotes .content, .info-frutas .content, .info-verduras .content,
-.info-carniceria .content, .info-mascotas .content, .info-licores .content,
-.info-flores .content{
-  max-width: 30rem;
-  margin: auto;
-  display: block;
-}
-
-.info-abarrotes .content .title, .info-frutas .content .title, .info-verduras .content .title,
-.info-carniceria .content .title, .info-mascotas .content .title, .info-licores .content .title,
-.info-flores .content .title{
-  font-size: 4rem;
-  color:var(--white);
-}
-
-.info-abarrotes .content p, .info-frutas .content p, .info-verduras .content p,
-.info-carniceria .content p, .info-mascotas .content p, .info-licores .content p,
-.info-flores .content p{
-  font-size: 1.7rem;
-  padding:1rem 0;
-  color:rgb(214, 214, 214);
-}
-/*  */
-
 
 .home .content h3{
   font-size: 5rem;
@@ -479,86 +349,449 @@ section{
   gap:1.5rem;
 }
 
-.product .title-products {
-  padding: 1rem 0;
-  font-size: 5rem;
-  text-align: center;
-  margin-top: -7rem;
-  color:  var(--secundary);
-  font-family: 'PoppinsBold';
+/* DDD */
+
+/*---------------------
+  Shop
+-----------------------*/
+
+.shop__sidebar {
+	padding-right: 20px;
 }
 
-.product .box-container .box{
+.shop__sidebar__search {
+	margin-bottom: 45px;
+}
+
+.shop__sidebar__search form {
+	position: relative;
+}
+
+.shop__sidebar__search form input {
+	width: 100%;
+	font-size: 15px;
+	color: #b7b7b7;
+	padding-left: 20px;
+	border: 1px solid #e5e5e5;
+	height: 42px;
+}
+
+.shop__sidebar__search form input::-webkit-input-placeholder {
+	color: #b7b7b7;
+}
+
+.shop__sidebar__search form input::-moz-placeholder {
+	color: #b7b7b7;
+}
+
+.shop__sidebar__search form input:-ms-input-placeholder {
+	color: #b7b7b7;
+}
+
+.shop__sidebar__search form input::-ms-input-placeholder {
+	color: #b7b7b7;
+}
+
+.shop__sidebar__search form input::placeholder {
+	color: #b7b7b7;
+}
+
+.shop__sidebar__search form button {
+	color: #b7b7b7;
+	font-size: 15px;
+	border: none;
+	background: transparent;
+	position: absolute;
+	right: 0;
+	padding: 0 15px;
+	top: 0;
+	height: 100%;
+}
+
+.shop__sidebar__accordion .card {
+	border: none;
+	border-radius: 0;
+	margin-bottom: 25px;
+}
+
+.shop__sidebar__accordion .card:last-child {
+	margin-bottom: 0;
+}
+
+.shop__sidebar__accordion .card:last-child .card-body {
+	padding-bottom: 0;
+	border-bottom: none;
+}
+
+.shop__sidebar__accordion .card-body {
+	padding: 0;
+	padding-top: 10px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.shop__sidebar__accordion .card-heading {
+	cursor: pointer;
+}
+
+.shop__sidebar__accordion .card-heading a {
+	color: #111111;
+	font-size: 16px;
+	font-weight: 700;
+	text-transform: uppercase;
+	display: block;
+}
+
+.shop__sidebar__categories ul,
+.shop__sidebar__price ul,
+.shop__sidebar__brand ul {
+	height: 225px;
+}
+
+.shop__sidebar__categories ul li,
+.shop__sidebar__price ul li,
+.shop__sidebar__brand ul li {
+	list-style: none;
+}
+
+.shop__sidebar__categories ul li a,
+.shop__sidebar__price ul li a,
+.shop__sidebar__brand ul li a {
+	color: #b7b7b7;
+	font-size: 15px;
+	line-height: 32px;
+	-webkit-transition: all, 0.3s;
+	-o-transition: all, 0.3s;
+	transition: all, 0.3s;
+}
+
+.shop__sidebar__categories ul li a:hover,
+.shop__sidebar__price ul li a:hover,
+.shop__sidebar__brand ul li a:hover {
+	color: #111111;
+}
+
+.shop__sidebar__brand ul {
+	height: auto;
+}
+
+.shop__sidebar__price ul {
+	height: auto;
+}
+
+.shop__sidebar__size {
+	padding-top: 15px;
+}
+
+.shop__sidebar__size label {
+	color: #111111;
+	font-size: 15px;
+	font-weight: 700;
+	text-transform: uppercase;
+	display: inline-block;
+	border: 1px solid #e5e5e5;
+	padding: 6px 25px;
+	margin-bottom: 10px;
+	margin-right: 5px;
+	cursor: pointer;
+}
+
+.shop__sidebar__size label.active {
+	background: #111111;
+	color: #ffffff;
+	border-color: #111111;
+}
+
+.shop__sidebar__size label input {
+	position: absolute;
+	visibility: hidden;
+}
+
+.shop__sidebar__color {
+	padding-top: 15px;
+}
+
+.shop__sidebar__color label {
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+	position: relative;
+	margin-right: 10px;
+	display: inline-block;
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+
+.shop__sidebar__color label.c-1 {
+	background: #0b090c;
+}
+
+.shop__sidebar__color label.c-2 {
+	background: #20315f;
+}
+
+.shop__sidebar__color label.c-3 {
+	background: #f1af4d;
+}
+
+.shop__sidebar__color label.c-4 {
+	background: #636068;
+}
+
+.shop__sidebar__color label.c-5 {
+	background: #57594d;
+}
+
+.shop__sidebar__color label.c-6 {
+	background: #e8bac4;
+}
+
+.shop__sidebar__color label.c-7 {
+	background: #d6c1d7;
+}
+
+.shop__sidebar__color label.c-8 {
+	background: #ed1c24;
+}
+
+.shop__sidebar__color label.c-9 {
+	background: #ffffff;
+}
+
+.shop__sidebar__color label:after {
+	position: absolute;
+	left: -3px;
+	top: -3px;
+	height: 36px;
+	width: 36px;
+	border: 1px solid #e5e5e5;
+	content: "";
+	border-radius: 50%;
+}
+
+.shop__sidebar__color label input {
+	position: absolute;
+	visibility: hidden;
+}
+
+.shop__sidebar__tags {
+	padding-top: 15px;
+}
+
+.shop__sidebar__tags a {
+	color: #404040;
+	font-size: 13px;
+	font-weight: 700;
+	background: #f1f5f8;
+	padding: 5px 18px;
+	display: inline-block;
+	text-transform: uppercase;
+	margin-right: 6px;
+	margin-bottom: 10px;
+	-webkit-transition: all, 0.3s;
+	-o-transition: all, 0.3s;
+	transition: all, 0.3s;
+}
+
+.shop__sidebar__tags a:hover {
+	background: #111111;
+	color: #ffffff;
+}
+
+.shop__sidebar__accordion .card-heading a:after,
+.shop__sidebar__accordion .card-heading>a.active[aria-expanded=false]:after {
+	content: "";
+	font-family: "FontAwesome";
+	font-size: 24px;
+	font-weight: 700;
+	color: #111111;
+	position: absolute;
+	right: 0;
+	top: 2px;
+	line-height: 20px;
+}
+
+.shop__sidebar__accordion .card-heading.active a:after {
+	content: "";
+	font-family: "FontAwesome";
+	font-size: 24px;
+	font-weight: 700;
+	color: #111111;
+	position: absolute;
+	right: 0;
+	top: 2px;
+	line-height: 20px;
+}
+
+.shop__product__option {
+	margin-bottom: 45px;
+}
+
+.shop__product__option p {
+	color: #111111;
+	margin-bottom: 0;
+}
+
+.shop__product__option__right {
+	text-align: right;
+}
+
+.shop__product__option__right p {
+	display: inline-block;
+	margin-bottom: 0;
+}
+
+.shop__product__option__right .nice-select {
+	float: none;
+	display: inline-block;
+	padding: 0;
+	line-height: 26px;
+	height: auto;
+	border: none;
+	padding-right: 28px;
+}
+
+.shop__product__option__right .nice-select:after {
+	border-bottom: 1.5px solid #111111;
+	border-right: 1.5px solid #111111;
+	height: 8px;
+	right: 12px;
+	width: 8px;
+}
+
+.shop__product__option__right .nice-select span {
+	color: #111111;
+	font-size: 15px;
+	font-weight: 700;
+}
+
+.shop__product__option__right .nice-select .list {
+	border-radius: 0;
+}
+
+.product__pagination {
+	padding-top: 25px;
+	text-align: center;
+}
+
+.product__pagination a {
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 700;
+	color: #111111;
+	height: 30px;
+	width: 30px;
+	border: 1px solid transparent;
+	border-radius: 50%;
+	line-height: 30px;
+	text-align: center;
+}
+
+.product__pagination a.active {
+	border-color: #111111;
+}
+
+.product__pagination a:hover {
+	border-color: #111111;
+}
+
+.product__pagination span {
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 700;
+	color: #111111;
+	padding-left: 10px;
+	padding-right: 15px;
+}
+
+/*---------------------
+  Shop
+-----------------------*/
+
+/* DDD */
+
+/*========== PRODUCTS ==========*/
+
+
+.nice-scroll .controls{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding:1.5rem 0;
+  list-style: none;
+}
+
+.nice-scroll .controls .btn{
+  margin:2rem;
+  line-height: 4rem;
+  font-weight: bolder;
+  text-align: center;
+  box-shadow: 0 .3rem .5rem rgba(0,0,0,.3);
+}
+
+.nice-scroll .controls .btn.button-active{
+  background:#bebcbc;
+}
+
+
+.box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin:2rem;
+  border:.1rem solid rgba(0,0,0,.3);
   flex:1 1 30rem;
+}
+
+.box .image{
+  height:12rem;
+  width: 20rem;
   text-align: center;
-  padding:2rem;
-  background-color: rgb(220 236 238);
-  border-radius: 2rem;
-  overflow: hidden;
-  position: relative;
+  padding:1rem;
+  background: #f0f0f0;
 }
 
-.product .box-container .box img{
-  height: 20rem;
-}
-
-/* .product .box-container .box .discount{
-  position: absolute;
-  top:1rem; left: 1rem;
-  background:rgba(0,255,0,.1);
-  color:var(--secundary);
-  padding:.7rem 1rem;
-  font-size: 2rem;
-} */
-
-.product .box-container .box h3{
-  color:var(--black);
-  font-size: 2.5rem;
-}
-
-.parq {
-  background:url(../images/parqueadero_free.jpg);
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: bottom;
-  background-size: cover;
-  position: relative;
-  margin-top: 8rem;
-  margin-bottom: 5rem;
-  padding-top: 3rem;
-  padding-bottom: 3rem; 
-  z-index: 1; 
-}
-
-.parq::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+.box .image img{
   height: 100%;
-  background: linear-gradient(to right top, #5e6b7ebe, #24282baf, #151e1fb7, #414035af, #50524bbb);
-  z-index: -1;
+  width: 100%;
+  object-fit: cover;
+  background:rgb(37, 37, 37);
 }
 
-.parq .content{
-  max-width: 30rem;
-  margin: auto;
-  display: block;
+.box:hover .image{
+  background:rgb(3, 3, 3);
 }
 
-.parq .content .title{
-  font-size: 4rem;
-  color:var(--white);
+.box .info{
+  width: 100%;
 }
 
-.parq .content p{
-  font-size: 1.7rem;
-  padding:1rem 0;
-  color:rgb(214, 214, 214);
+.box .info h3{
+  font-size: 2rem;
+  color:var(--blue);
+  padding:1rem;
 }
 
+.box .info .subInfo{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: .1rem solid rgba(0,0,0,.3);
+  padding:1rem;
+}
 
+.box .info .subInfo .price{
+  color:#ff3300;
+  font-size: 2rem;
+}
+
+.box .info .subInfo .stars i{
+  color:orange;
+  font-size: 1.5rem;
+}
+
+/*========== PRODUCTS ==========*/
 
 .contact .row {
   display: -webkit-box;
