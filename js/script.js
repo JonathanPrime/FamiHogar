@@ -48,7 +48,7 @@ $('#customers-testimonials').owlCarousel({
   }
 });
 
-$('.nice-scroll .btn').click(function(){
+$('.nice-scroll .option').click(function(){
 
   let filter = $(this).attr('data-filter');
   if(filter == 'all'){
@@ -75,6 +75,26 @@ var owl = $('.owl-carousel-class').owlCarousel({
   nav: true,
   items: 4 ,
 });
+
+/*------------------
+        Accordin Active
+    --------------------*/
+    $('.collapse').on('shown.bs.collapse', function () {
+      $(this).prev().addClass('active');
+  });
+
+  $('.collapse').on('hidden.bs.collapse', function () {
+      $(this).prev().removeClass('active');
+  });
+
+  $(".nice-scroll").niceScroll({
+        cursorcolor: "#0d0d0d",
+        cursorwidth: "5px",
+        background: "#e5e5e5",
+        cursorborder: "",
+        autohidemode: true,
+        horizrailenabled: false
+    });
 
 
 popupWhatsApp = () => {

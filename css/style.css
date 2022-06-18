@@ -734,19 +734,25 @@ section{
   background:#bebcbc;
 }
 
+.image-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 
 .box{
   display: flex;
   align-items: center;
   justify-content: center;
   margin:2rem;
-  border:.1rem solid rgba(0,0,0,.3);
   flex:1 1 30rem;
 }
 
 .box .image{
-  height:12rem;
-  width: 20rem;
+  height:50%;
+  width: 50%;
   text-align: center;
   padding:1rem;
   background: #f0f0f0;
@@ -790,6 +796,41 @@ section{
   color:orange;
   font-size: 1.5rem;
 }
+
+.nice-scroll li a {
+  cursor: pointer;
+}
+
+.shop__sidebar__categories ul,
+.shop__sidebar__price ul,
+.shop__sidebar__brand ul {
+	height: 225px;
+}
+
+.shop__sidebar__categories ul li,
+.shop__sidebar__price ul li,
+.shop__sidebar__brand ul li {
+	list-style: none;
+}
+
+.shop__sidebar__categories ul li a,
+.shop__sidebar__price ul li a,
+.shop__sidebar__brand ul li a {
+	color: #b7b7b7;
+	font-size: 15px;
+	line-height: 32px;
+	-webkit-transition: all, 0.3s;
+	-o-transition: all, 0.3s;
+	transition: all, 0.3s;
+}
+
+.shop__sidebar__categories ul li a:hover,
+.shop__sidebar__price ul li a:hover,
+.shop__sidebar__brand ul li a:hover {
+	color: #111111;
+}
+
+
 
 /*========== PRODUCTS ==========*/
 
