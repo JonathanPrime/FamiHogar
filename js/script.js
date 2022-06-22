@@ -20,17 +20,12 @@ window.onscroll = () =>{
 }
 
 $('#customers-testimonials').owlCarousel({
-  /* rtl: true, */
-  loop: true,
   nav: true,
-  navText: ["<div class='nav-button owl-prev'>‹</div>", "<div class='nav-button owl-next'>›</div>"],
-  /* center: true, */
-  items: 4,
+  navText: ["<div class='nav-button owl-next'>‹</div>", "<div class='nav-button owl-prev'>›</div>"],
+  items: 3,
   margin: 0,
   autoplay: false,
   dots: false,
-  autoplayTimeout: 8500,
-  smartSpeed: 450,
 
   responsive: {
     0: {
@@ -40,41 +35,66 @@ $('#customers-testimonials').owlCarousel({
       items: 2
     },
     1170: {
-      items: 4
+      items: 3
     },
     3840: {
-      items: 4
+      items: 3
     }
   }
 });
 
-$('.nice-scroll .option').click(function(){
-
-  let filter = $(this).attr('data-filter');
-  if(filter == 'all'){
-      console.log('prueba1');
-      $('.product__item .box').show(400);
-  }else{
-      console.log('prueba2');
-      $('.product__item .box').not('.'+filter).hide(200);
-      $('.product__item .box').filter('.'+filter).show(400);
-  }
-
-  $(this).addClass('button-active').siblings().removeClass('button-active');
-
+var owl = $('.owl-carousel').owlCarousel({
+  loop: true,
+  margin: 0,
+  nav: true,
+  items:3,
 });
 
-$('.owl-filter-class').on('click', '.item', function () {
+$('.owl-filter').on('click', '.item', function() {
   var $item = $(this);
   var filter = $item.data('owl-filter')
   owl.owlcarousel2_filter(filter);
 });
-var owl = $('.owl-carousel-class').owlCarousel({
-  loop: true,
-  margin: 10,
-  nav: true,
-  items: 4 ,
-});
+
+var totalItems = $('.item').length;
+if (totalItems > 3) {
+  $('.owl-carousel .item').each(function () {
+    var next = $(this).next();
+    if (!next.length) {
+      next = $(this).siblings(':first');
+    }
+    next.children(':first-child').clone().appendTo($(this));
+    if (next.next().length > 0) {
+      next.next().children(':first-child').clone().appendTo($(this)).addClass('rightest');
+    }
+    else {
+      $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+    }
+  });
+}
+else {
+  (function () {
+    $('.owl-carousel .item').each(function () {
+      var itemToClone = $(this);
+      for (var i = 1; i < 2; i++) {
+        itemToClone = itemToClone.next();
+        if (!itemToClone.length) {
+          itemToClone = $(this).siblings(':first');
+        }
+        itemToClone.children(':first-child').clone()
+          .addClass("cloneditem-" + (i))
+          .appendTo($(this));
+        jQuery('.owl-carousel').on('slid.bs.carousel', function () {
+          var totalItems = jQuery('.owl-carousel .item').length;
+          var currentIndex = jQuery('.owl-carousel .item div.active').index() + 1;
+          if (totalItems == currentIndex) {
+            clearInterval(jQuery('.owl-carousel .item').data('bs.carousel').interval);
+          }
+        });
+      }
+    });
+  }());
+}
 
 /*------------------
         Accordin Active
